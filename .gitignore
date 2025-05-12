@@ -1,0 +1,13 @@
+# Arquivos e pastas do sistema
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# Pastas de configurações de IDEs/editores
+.vscode/
+.idea/
+
+# Arquivos temporários ou backups
+*.bak
+*.tmp
+
