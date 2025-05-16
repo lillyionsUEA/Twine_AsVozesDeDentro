@@ -104,13 +104,143 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="As Vozes de Dentro" startnode="8" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="025BE2F3-38E0-46B6-87E2-C7AC48A07F8F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.layout-container {
+	<tw-storydata name="As Vozes de Dentro" startnode="8" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="025BE2F3-38E0-46B6-87E2-C7AC48A07F8F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body{
+  color: black;
+  background-color: grey;
+}
+
+a {
+  color: MidnightBlue;
+}
+
+a.hover {
+  color: Navy;
+}
+
+#ui-bar {
+	display: none !important;
+}
+
+#story {
+	margin-left: 0 !important;
+}
+
+.layout-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 2em;
   gap: 2em;
 }
+
+.text-side {
+  flex: 1;
+  max-width: 60%;
+  font-family: Georgia, serif;
+  color: black;
+}
+
+.text-side h1 {
+  font-size: 2em;
+  color: black;
+}
+
+.text-side h2 {
+  margin-top: 2em;
+  color: black;
+}
+
+.text-side p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.image-side {
+  flex: 0 0 30%;
+  max-width: 300px;
+}
+
+.image-side img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.image-with-text {
+  max-width: 500px
+}
+
+.image-with-text img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Em telas pequenas, mantém a imagem à direita mas reduz o tamanho */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .text-side {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .image-side {
+    flex: 1 1 100%;
+    max-width: 200px;
+    margin-left: auto;
+  }
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0e0e0e;
+    color: #eaeaea;
+    font-family: 'Georgia', serif;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+    color: #aaaaaa;
+    margin-bottom: 2em;
+    font-style: italic;
+  }
+
+  .menu-buttons button {
+    background-color: #222;
+    color: #eaeaea;
+    border: 2px solid #eaeaea;
+    padding: 0.8em 2em;
+    margin: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .menu-buttons button:hover {
+    background-color: #eaeaea;
+    color: #111;
+  }
+
+
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Ato 1 - Cenário 1" tags="" position="1150,300" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -124,14 +254,24 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 	[[O papai... não volta mais.|Ato 1 - Cenário 1 - Escolha 1]]
 	[[Vamos falar de outra coisa, Tito.|Ato 1 - Cenário 1 - Escolha 3]]
   &lt;/div&gt;
+  &lt;div class=&quot;image-side&quot;&gt;
+    &lt;img src=&quot;Images\Ato 1 - 1.1.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 1.2.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 1.3.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 1.4.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 1.5.png&quot; /&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;img src=&quot;Images\Ato 1 - Cenário 1.png&quot; /&gt;</tw-passagedata><tw-passagedata pid="2" name="Ato 1 - Cenário 1 - Escolha 1" tags="" position="1000,500" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+</tw-passagedata><tw-passagedata pid="2" name="Ato 1 - Cenário 1 - Escolha 1" tags="" position="1000,500" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
+&lt;p&gt;Helena força um sorriso, mesmo que por dentro a dúvida a corroa.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Se eu repetir isso o suficiente, talvez eu mesma acredite.”&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Os olhos de Tito brilham por um momento. Ele volta a brincar, mais tranquilo.&lt;/p&gt;
 
 [[Continuar|Ato 1 - Cenário 2]]</tw-passagedata><tw-passagedata pid="3" name="Ato 1 - Cenário 1 - Escolha 2" tags="" position="1200,500" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
-
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Tito abaixa a cabeça. O soldadinho escorrega de sua mão e cai no chão com um estalo seco.&lt;/p&gt;
+&lt;p&gt;Helena sente o peso da verdade que ela mesma mal consegue sustentar.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Ele merecia saber. Mas por que isso parece me quebrar mais do que a ele?”&lt;/i&gt;&lt;/p&gt;
 
 [[Continuar|Ato 1 - Cenário 2]]</tw-passagedata><tw-passagedata pid="4" name="FINAL 1" tags="" position="1000,4000" size="100,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -181,27 +321,76 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
 
 
 </tw-passagedata><tw-passagedata pid="7" name="Ato 1 - Cenário 1 - Escolha 3" tags="" position="1400,500" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
+&lt;p&gt;Helena desvia o olhar, tentando mudar de assunto. Tito não insiste, mas seu silêncio diz tudo.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Talvez eu tenha protegido ele... ou talvez só esteja fugindo.”&lt;/i&gt;&lt;/p&gt;
 
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
-
-[[Continuar|Ato 1 - Cenário 2]]</tw-passagedata><tw-passagedata pid="8" name="Menu" tags="" position="900,300" size="100,100">&lt;h1&gt;As Vozes de Dentro&lt;/h1&gt;
-Esse jogo tem ao todo &lt;b&gt;três&lt;/b&gt; finais diferentes, será que você consegue encontrar todos?
-[[Jogar|Ato 1 - Cenário 1]]
-[[Créditos]]
+[[Continuar|Ato 1 - Cenário 2]]</tw-passagedata><tw-passagedata pid="8" name="Menu" tags="" position="900,300" size="100,100">&lt;div id=&quot;menu-container&quot;&gt;
+  &lt;h1&gt;As Vozes de Dentro&lt;/h1&gt;
+  &lt;p class=&quot;subtitle&quot;&gt;Uma narrativa interativa&lt;/p&gt;
+  &lt;div class=&quot;menu-buttons&quot;&gt;
+    &lt;button onclick=&quot;SugarCube.Engine.play(&#39;Ato 1 - Cenário 1&#39;)&quot;&gt;Iniciar Jogo&lt;/button&gt;
+    &lt;button onclick=&quot;SugarCube.Engine.play(&#39;Créditos&#39;)&quot;&gt;Créditos&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;&lt;set $sanity to 0&gt;&gt;
 &lt;&lt;set $ilusion to 0&gt;&gt;
-&lt;&lt;set $pain to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Créditos" tags="" position="900,100" size="100,100">&lt;h1&gt;Créditos&lt;/h1&gt;
+&lt;&lt;set $pain to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Créditos" tags="" position="900,100" size="100,100">&lt;style&gt;
+  .credits {
+    font-family: sans-serif;
+    margin-top: 1.5em;
+    background-color: #111;
+    color: #eee;
+    padding: 1.5em;
+    border-radius: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8em;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #fff;
+    margin-bottom: 0.5em;
+  }
+
+  .return-button {
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.2em;
+  }
+
+  .return-button a {
+    color: #fff;
+    background-color: #444;
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .return-button a:hover {
+    background-color: #666;
+  }
+&lt;/style&gt;
+
+&lt;h1&gt;Créditos&lt;/h1&gt;
 &lt;div class=&quot;credits&quot;&gt;
-  Felipe - Roterista
-  Gabriel Motta - Ilustração
-  Guilherme Luz - Ilustração
-  Liv - Desenvolvedor
-  Roberto - Desenvolvedor
+  Felipe Santos – Roteirista&lt;br&gt;
+  Gabriel Motta – Ilustração&lt;br&gt;
+  Guilherme Luz – Ilustração&lt;br&gt;
+  Livia Hadassa – Desenvolvedor&lt;br&gt;
+  Roberto Junio – Desenvolvedor
 &lt;/div&gt;
 
-[[Voltar|Menu]]
-</tw-passagedata><tw-passagedata pid="10" name="Ato 1 - Cenário 2" tags="" position="1150,700" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
+&lt;div class=&quot;return-button&quot;&gt;
+  [[Voltar|Menu]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Ato 1 - Cenário 2" tags="" position="1150,700" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
     &lt;h1&gt;Palavras Cortadas&lt;/h1&gt;
     &lt;p&gt;
@@ -209,16 +398,30 @@ Esse jogo tem ao todo &lt;b&gt;três&lt;/b&gt; finais diferentes, será que voc�
     &lt;/p&gt;
     O som de Tito brincando longe acalma e assusta ao mesmo tempo. Vera, no quarto, murmura baixinho — uma prece? Ou uma conversa?
 	&lt;h2&gt;Será que eu devo ler o diario do pai escondido?&lt;/h2&gt;
-
 	[[Sim. Tento entender o que aconteceu antes do isolamento.|Ato 1 - Cenário 2 - Escolha 1]]
 	[[Não. Pode me fazer mal saber.|Ato 1 - Cenário 2 - Escolha 2]]
 	[[Leio só um trecho e escondo de novo.|Ato 1 - Cenário 2 - Escolha 3]]
   &lt;/div&gt;
+  &lt;div class=&quot;image-side&quot;&gt;
+    &lt;img src=&quot;Images\Ato 1 - 2.1.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 2.2.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 2.3.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 2.4.png&quot; /&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Ato 1 - Cenário 2 - Escolha 1" tags="" position="1000,900" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
+&lt;p&gt;Helena vira as páginas com mãos trêmulas. Algumas palavras saltam como sussurros proibidos: &quot;transmissão&quot;, &quot;isolamento&quot;, &quot;mentiras&quot;.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Por que ele não contou nada disso para a gente?”&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;Uma parte dela desperta — faminta por respostas, ainda que doa.&lt;/p&gt;
 
 [[Continuar|Ato 1 - Cenário 3]]</tw-passagedata><tw-passagedata pid="12" name="Ato 1 - Cenário 2 - Escolha 2" tags="" position="1200,900" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
+&lt;p&gt;Helena fecha o caderno com firmeza, como se o papel pudesse morder.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Tem coisas que é melhor não saber... né?”&lt;/i&gt; Mas a dúvida pulsa, viva.&lt;/p&gt;
+&lt;p&gt;Lá fora, Tito ri. Dentro, Vera murmura. E ela se pergunta se o silêncio protege ou consome.&lt;/p&gt;
+
 [[Continuar|Ato 1 - Cenário 3]]</tw-passagedata><tw-passagedata pid="13" name="Ato 1 - Cenário 2 - Escolha 3" tags="" position="1400,900" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Ela lê uma linha. Duas. Três. Depois fecha o diário com pressa, como se estivesse fazendo algo errado.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“A cidade... não sei se ainda existe.”&lt;/i&gt; Ecoa na mente como um aviso — ou uma lembrança.&lt;/p&gt;
+&lt;p&gt;Helena respira fundo. O ar parece mais pesado agora.&lt;/p&gt;
 
 [[Continuar|Ato 1 - Cenário 3]]</tw-passagedata><tw-passagedata pid="14" name="Ato 1 - Cenário 3" tags="" position="1150,1100" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -231,17 +434,26 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
 	[[Divide igualmente entre os três.|Ato 2 - Cenário 3 - Escolha 2]]
 	[[Come mais do que deveria em segredo.|Ato 2 - Cenário 3 - Escolha 3]]
   &lt;/div&gt;
+  &lt;div class=&quot;image-side&quot;&gt;
+    &lt;img src=&quot;Images\Ato 1 - 3.1.png&quot; /&gt;
+    &lt;img src=&quot;Images\Ato 1 - 3.2.png&quot; /&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="15" name="Ato 2 - Cenário 3 - Escolha 1" tags="" position="1000,1300" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena empurra metade do arroz para o prato de Tito, fingindo que não tem fome.&lt;/p&gt;
+&lt;p&gt;Ele sorri — um daqueles sorrisos raros, que quebram o cinza. Ela retribui, mas por dentro, um vazio cresce.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Eu aguento. Ele precisa mais.”&lt;/i&gt;&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 4]]</tw-passagedata><tw-passagedata pid="16" name="Ato 2 - Cenário 3 - Escolha 2" tags="" position="1200,1300" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Com cuidado quase matemático, Helena distribui cada colher.&lt;/p&gt;
+&lt;p&gt;Três pratos. Três porções. Nenhuma culpa. Mas também nenhum consolo.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“É o justo.”&lt;/i&gt; pensa, ainda que a fome não entenda justiça.&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 4]]</tw-passagedata><tw-passagedata pid="17" name="Ato 2 - Cenário 3 - Escolha 3" tags="" position="1400,1300" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
-
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Esperando que ninguém perceba, Helena raspa um pouco a mais para si.&lt;/p&gt;
+&lt;p&gt;O gosto é quase imperceptível. Mas a culpa? Essa mastiga junto.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Só hoje... só um pouco.”&lt;/i&gt;&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 4]]</tw-passagedata><tw-passagedata pid="18" name="Ato 2 - Cenário 4" tags="" position="1150,1500" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -260,13 +472,16 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
  
 
 </tw-passagedata><tw-passagedata pid="19" name="Ato 2 - Cenário 4 - Escolha 1" tags="" position="1000,1700" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena segura o rádio no escuro, o coração batendo alto.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Será que alguém lá fora ainda se importa?”&lt;/i&gt; A voz que responde no chiado acende uma chama tênue dentro dela — esperança misturada com medo.&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 5]]</tw-passagedata><tw-passagedata pid="20" name="Ato 2 - Cenário 4 - Escolha 2" tags="" position="1200,1700" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena afasta o rádio, o frio da dúvida gelando suas esperanças.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Talvez seja melhor assim. Segurança vale mais que um risco vazio.”&lt;/i&gt; Mas o silêncio que segue é pesado, e a incerteza corrói um pouco a coragem.&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 5]]</tw-passagedata><tw-passagedata pid="21" name="Ato 2 - Cenário 4 - Escolha 3" tags="" position="1400,1700" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Com voz firme, Helena questiona o emissor, buscando confirmação.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Se é verdade, preciso saber para onde ir. Para onde podemos ir.”&lt;/i&gt; A determinação mescla esperança e cautela, como um fio tênue entre sonho e realidade.&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 5]]</tw-passagedata><tw-passagedata pid="22" name="Ato 2 - Cenário 5" tags="" position="1150,1900" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -275,23 +490,30 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
      Nos dias seguintes, Tito começa a desenhar freneticamente. São figuras borradas, com olhos brancos e bocas abertas. “Eles falaram comigo”, diz ele. “Querem brincar. Dizem que a mamãe está errada.”
 Helena encontra um dos desenhos debaixo do travesseiro. Vera os evita, finge que não vê. Há algo nos papéis que pulsa como se fosse vivo.
      &lt;/p&gt;
+     &lt;div class=&quot;image-with-text&quot;&gt;
+    	&lt;img src=&quot;Images\Ato 2 - 5.1.png&quot; /&gt;
+  	&lt;/div&gt;
 	&lt;h2&gt;O que você faz com os desenhos de Tito?&lt;/h2&gt;
-[[Queima. Acha perturbador.|Ato 2 - Cenário 5 - Escolha 1]]
-[[Guarda escondido.|Ato 2 - Cenário 5 - Escolha 2]]
-[[Mostra à mãe.|Ato 2 - Cenário 5 - Escolha 3]]
+	[[Queima. Acha perturbador.|Ato 2 - Cenário 5 - Escolha 1]]
+	[[Guarda escondido.|Ato 2 - Cenário 5 - Escolha 2]]
+	[[Mostra à mãe.|Ato 2 - Cenário 5 - Escolha 3]]
   &lt;/div&gt;
 &lt;/div&gt;
 
 
 
 </tw-passagedata><tw-passagedata pid="23" name="Ato 2 - Cenário 5 - Escolha 1" tags="" position="1000,2100" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena observa as figuras distorcidas e sente um arrepio profundo. Sem hesitar, coloca os desenhos na chama da vela.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Isso não pode ficar aqui. Não podemos deixar que essas coisas cresçam.”&lt;/i&gt; O fogo consome o papel, mas a inquietação permanece, como uma sombra em seu peito.&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 6]]</tw-passagedata><tw-passagedata pid="24" name="Ato 2 - Cenário 5 - Escolha 2" tags="" position="1200,2100" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena enrola os desenhos e os guarda no fundo de uma gaveta, evitando pensar no que eles significam.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Talvez seja só a imaginação do Tito... ou um jeito dele lidar com tudo.”&lt;/i&gt; O peso do segredo faz o ar no quarto ficar mais denso, e o silêncio parece mais pesado.&lt;/p&gt;
+
 
 [[Continuar|Ato 2 - Cenário 6]]</tw-passagedata><tw-passagedata pid="25" name="Ato 2 - Cenário 5 - Escolha 3" tags="" position="1400,2100" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena segura o papel nas mãos trêmulas e vai até Vera, que desvia o olhar.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Mãe, olha isso...”&lt;/i&gt; O gesto desperta algo em Vera, um misto de medo e negação, deixando o ambiente carregado e tenso.&lt;/p&gt;
 
 [[Continuar|Ato 2 - Cenário 6]]</tw-passagedata><tw-passagedata pid="26" name="Ato 3 - Cenário 7" tags="" position="1150,2700" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -307,13 +529,16 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
 	[[Faz ele prometer que vai resistir até a manhã.|Ato 3 - Cenário 7 - Escolha 3]]
   &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Ato 3 - Cenário 7 - Escolha 3" tags="" position="1400,2900" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena fixa os olhos em Tito, buscando força para os dois.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Prometa que vai lutar até amanhecer, Tito. Eu vou estar aqui com você, sempre.”&lt;/i&gt; Um pacto silencioso entre irmãos, uma esperança tênue no meio do desespero.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 8]]</tw-passagedata><tw-passagedata pid="28" name="Ato 3 - Cenário 7 - Escolha 2" tags="" position="1200,2900" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena respira fundo, segurando a mão do irmão com força.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Tito, a situação está difícil. Mas eu vou ficar aqui com você, não importa o que aconteça.”&lt;/i&gt; A sinceridade amarga cria um elo forte, apesar do medo.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 8]]</tw-passagedata><tw-passagedata pid="29" name="Ato 3 - Cenário 7 - Escolha 1" tags="" position="1000,2900" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena molha os panos na água suja, limpando delicadamente o rosto de Tito, apesar do gosto amargo da água.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Fique quieto, Tito. Vou cuidar de você, mesmo que seja só isso...”&lt;/i&gt; A esperança persiste, pequena, em cada gesto cuidadoso.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 8]]</tw-passagedata><tw-passagedata pid="30" name="Ato 2 - Cenário 6" tags="" position="1150,2300" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -322,19 +547,25 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
      Durante uma discussão abafada, Vera observa Helena com desconfiança. “Você ainda pensa em sair, não é? O rádio... ele fala com você, não fala?”
 	Helena tenta desviar, mas Vera se aproxima: “A doença entra por palavras. Pelo som. Ele não é real.” Helena olha para o armário trancado. O chiado parece ecoar mesmo com a porta fechada.
      &lt;/p&gt;
+  &lt;div class=&quot;image-with-text&quot;&gt;
+    &lt;img src=&quot;Images\Ato 2 - 6.1.png&quot; /&gt;
+  &lt;/div&gt;
 	&lt;h2&gt;Você confronta Vera sobre o rádio?&lt;/h2&gt;
     [[Sim. Ela está errada.|Ato 2 - Cenário 6 - Escolha 1]]
 	[[Não. Ela está frágil.|Ato 2 - Cenário 6 - Escolha 2]]
 	[[Tenta convencer com calma.|Ato 2 - Cenário 6 - Escolha 3]]
   &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Ato 2 - Cenário 6 - Escolha 1" tags="" position="1000,2500" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena ergue o queixo, a voz firme apesar do medo que sente por dentro.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Vera, você está errada. O rádio é real. Eu ouvi a voz, e não vou ignorar isso.”&lt;/i&gt; A tensão cresce no quarto, como uma tempestade prestes a explodir.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 7]]</tw-passagedata><tw-passagedata pid="32" name="Ato 2 - Cenário 6 - Escolha 2" tags="" position="1200,2500" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena suaviza a expressão, baixando o olhar.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Talvez você esteja certa, mãe... Você tem passado por tanto...”&lt;/i&gt; Ela tenta conter a própria inquietação, respeitando o medo e a dor de Vera.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 7]]</tw-passagedata><tw-passagedata pid="33" name="Ato 2 - Cenário 6 - Escolha 3" tags="" position="1400,2500" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena respira fundo, escolhendo palavras cuidadosas.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Mãe, eu sei que está difícil. Mas o rádio pode ser a esperança que precisamos. Podemos tentar entender juntos?”&lt;/i&gt; A delicadeza da fala busca abrir uma ponte onde só há desconfiança.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 7]]</tw-passagedata><tw-passagedata pid="34" name="Ato 3 - Cenário 8" tags="" position="1150,3100" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -343,6 +574,9 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
      Insônia. Helena anda pela sala escura. O rádio, trancado no armário, parece pulsar. Ela ouve passos, mas ninguém se move. Encontra um espelho no quarto do pai, coberto por pano.
 	Tira o pano. Seu reflexo sorri primeiro. Uma voz surge do rádio, mesmo desligado: “Você ainda está aí...?”
      &lt;/p&gt;
+     &lt;div class=&quot;image-with-text&quot;&gt;
+    	&lt;img src=&quot;Images\Ato 3 - 8.1.png&quot; /&gt;
+  	&lt;/div&gt;
    Ela sente que se olhar por muito tempo, algo pode responder de volta.
 	&lt;h2&gt;Durante uma noite sem sono, você...&lt;/h2&gt;
     [[Segue o som do rádio até o telhado.|Ato 3 - Cenário 8 - Escolha 1]]
@@ -358,13 +592,16 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
 
 
 </tw-passagedata><tw-passagedata pid="35" name="Ato 3 - Cenário 8 - Escolha 1" tags="" position="1000,3300" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena se move silenciosamente, guiada pelo som sussurrante do rádio que pulsa mesmo trancado.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Será que alguém está aí, mesmo?”&lt;/i&gt; No telhado, o ar frio corta a esperança e a dúvida, enquanto ela tenta entender o mistério que a cerca.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 9]]</tw-passagedata><tw-passagedata pid="36" name="Ato 3 - Cenário 8 - Escolha 2" tags="" position="1200,3300" size="100,100">&lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Sentada à mesa, Helena pega papel e caneta, tentando organizar os pensamentos confusos que a noite trouxe.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Pai, se você estiver ouvindo, saiba que estamos aqui... precisamos de você.”&lt;/i&gt; As palavras são um fio tênue que mantém sua sanidade em meio ao silêncio da casa.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 9]]</tw-passagedata><tw-passagedata pid="37" name="Ato 3 - Cenário 8 - Escolha 3" tags="" position="1400,3300" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
-Precisa ser especificado como é a reação dos personagens a essa resposta... antes de seguir para a próxima
+&lt;p&gt;Helena tira o pano do espelho e encara o próprio reflexo, que sorri antes dela.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Quem é você?”&lt;/i&gt; A voz que responde é a sua, mas algo dentro dela parece querer se libertar, dividida entre a dúvida e o medo.&lt;/p&gt;
 
 [[Continuar|Ato 3 - Cenário 9]]</tw-passagedata><tw-passagedata pid="38" name="Ato 3 - Cenário 9" tags="" position="1150,3500" size="200,100">&lt;div class=&quot;layout-container&quot;&gt;
   &lt;div class=&quot;text-side&quot;&gt;
@@ -384,17 +621,26 @@ Precisa ser especificado como é a reação dos personagens a essa resposta... a
 
 
 </tw-passagedata><tw-passagedata pid="39" name="Ato 3 - Cenário 9 - Escolha 1" tags="" position="1000,3700" size="100,100">&lt;&lt;set $pain to $pain + 1&gt;&gt;
+&lt;p&gt;Helena respira fundo, sabe que a escolha pode ser arriscada, mas não pode esperar mais.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Preciso tentar, por Tito.”&lt;/i&gt; Ela pega o rádio e algumas poucas coisas, deixando o silêncio e o medo para trás, em busca da promessa de um posto seguro.&lt;/p&gt;
+
 &lt;&lt;if  $pain gte 2&gt;&gt; [[Continuar|FINAL 3]]
 &lt;&lt;elseif $sanity gte 2&gt;&gt; [[Continuar|FINAL 1]]
 &lt;&lt;elseif $ilusion gte 2&gt;&gt; [[Continuar|FINAL 2]]
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="40" name="Ato 3 - Cenário 9 - Escolha 2" tags="" position="1200,3700" size="100,100">&lt;&lt;if  $pain gte 2&gt;&gt; [[Continuar|FINAL 3]]
+</tw-passagedata><tw-passagedata pid="40" name="Ato 3 - Cenário 9 - Escolha 2" tags="" position="1200,3700" size="100,100">&lt;p&gt;Helena se aproxima de Vera, segurando suas mãos com firmeza.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Não podemos esperar mais, precisamos sair juntos.”&lt;/i&gt; A hesitação de Vera se mistura ao medo e à esperança, criando um fio tênue que pode salvar ou condenar a família.&lt;/p&gt;
+
+&lt;&lt;if  $ilusion gte 2&gt;&gt; [[Continuar|FINAL 2]]
 &lt;&lt;elseif $sanity gte 2&gt;&gt; [[Continuar|FINAL 1]]
-&lt;&lt;elseif $ilusion gte 2&gt;&gt; [[Continuar|FINAL 2]]
+&lt;&lt;elseif $pain gte 2&gt;&gt; [[Continuar|FINAL 3]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Ato 3 - Cenário 9 - Escolha 3" tags="" position="1400,3700" size="100,100">&lt;&lt;set $sanity to $sanity + 1&gt;&gt;
 &lt;&lt;set $ilusion to $ilusion + 1&gt;&gt;
-&lt;&lt;if  $pain gte 2&gt;&gt; [[Continuar|FINAL 3]]
-&lt;&lt;elseif $sanity gte 2&gt;&gt; [[Continuar|FINAL 1]]
+&lt;p&gt;Helena olha para Tito, cansada e insegura, e decide adiar a decisão.&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;“Vamos tentar resistir mais um pouco...”&lt;/i&gt; A espera pesa como um peso no peito, enquanto o tempo passa lento e incerto.&lt;/p&gt;
+
+&lt;&lt;if  $sanity gte 2&gt;&gt; [[Continuar|FINAL 1]]
+&lt;&lt;elseif $pain gte 2&gt;&gt; [[Continuar|FINAL 3]]
 &lt;&lt;elseif $ilusion gte 2&gt;&gt; [[Continuar|FINAL 2]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="StoryInit" tags="" position="700,300" size="100,100"></tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
